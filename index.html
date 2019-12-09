@@ -2,6 +2,8 @@
 <html lang="EN">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio(MY)</title>
     <link href="https://fonts.googleapis.com/css?family=Courgette|Marck+Script|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -276,25 +278,23 @@
                     <form>
                         <div class="form_inner">
                             <div class="form_box">
-                                <input type="hidden" name="project_name" value="Portfolio">
-                                <input type="hidden" name="admin_e-mail" value="fenix.life36@gmail.com">
-                                <input type="hidden" name="form_subject" value="New заявка">
                                 <label>
-                                    <input type="text" placeholder="Name">
+                                    <input type="text" id="name" name="name" placeholder="Name">
                                 </label>
                                 <label>
-                                    <input type="text" placeholder="Your E-mail">
+                                    <input type="email" id="email" name="email" placeholder="Your E-mail">
                                 </label>
                                 <label>
-                                    <input type="text" placeholder="Subject">
+                                    <input type="text" id="subject" name="subject" placeholder="Subject">
                                 </label>
                                 <label>
-                                    <textarea placeholder="Your Message" ></textarea>
+                                    <textarea name="text" id="message" placeholder="Your Message" ></textarea>
                                 </label>
-                                <a data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" data-options='{"touch" : false}' class="form_btn">Send Message</a>
+                                <button type="button" id="sendMail" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;" data-options='{"touch" : false}' class="form_btn"  > Send Message</button>
                             </div>
                         </div>
                     </form>
+                    <div id="errorMess"></div>
                 </div>
                 <div class="contacts_box">
                     <div class="contacts_tilte">
@@ -370,7 +370,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/main.js"></script>
 
 
